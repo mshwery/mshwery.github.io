@@ -1,0 +1,31 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  background-color: #DFE1E4;
+  height: 1px;
+  border: 0;
+  margin: 2rem auto;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 85%;
+  }
+}
