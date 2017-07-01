@@ -2,13 +2,18 @@
 layout: default
 ---
 
-<ul id="post-list">
+<ul class="posts">
   {% for post in paginator.posts %}
-    <li>
-      <a href="{{ post.url | prepend: site.baseurl }}">
-          <aside class="dates">{{ post.date | date: "%b %-d" }}</aside>
-      </a>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} <h2>{{ post.description }}</h2></a>
+    <li class="posts-item">
+      <h2>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">
+          {{ post.title }}
+        </a>
+      </h2>
+      <p>
+        {{ post.excerpt | strip_html }}
+        <a class="continue" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+      </p>
     </li>
   {% endfor %}
 </ul>

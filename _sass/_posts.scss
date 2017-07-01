@@ -1,14 +1,22 @@
-
-.articles .post-title {
-  font-size: 1.75em;
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.articles .post-title a {
-  color: #333;
+.posts .post-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+.posts-item {
+  padding-top: 2rem;
 }
 
 .continue {
-  white-space: nowrap;
+  display: block;
+  margin: 1rem 0;
 }
 
 .post .words {
@@ -31,8 +39,6 @@
 
 .post {
   color: #333;
-  padding: 0;
-  margin-top: 3em;
 }
 
 .post header {
@@ -62,7 +68,6 @@
 
 .post-content figure {
   margin: 0 0 32px;
-  text-align: center;
 }
 
 .post-content figcaption {
@@ -122,40 +127,8 @@
 }
 
 .post-date {
-  font-size: .875em;
   color: #888;
-  font-style: italic;
-  position: relative;
-  padding-top: 10px;
   display: block;
-}
-
-.post-date:before {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  content: '';
-  background: #888;
-  width: 50px;
-  height: 1px;
-}
-
-.articles {
-  border-top: 1px solid #eee;
-}
-
-.articles ul {
-  padding: 0;
-  list-style: none;
-  font-size: 1.125em;
-}
-
-.articles .date {
-  color: #999;
-}
-
-.articles .date, .articles .words {
-  font-size: .8em;
 }
 
 li {
@@ -174,10 +147,6 @@ li {
 
   .post-content figure {
     margin: 0 0 30px;
-  }
-
-  .articles {
-    margin: 0;
   }
 
   .post .words {
