@@ -14,7 +14,7 @@ Perhaps the word 'save' needs some thought. What other words represent both lega
 I really like 'commit' because I work with versioning systems on a daily basis. A file goes through many changes – some get committed, others get discarded. Each commit is a snapshot of the file in that moment. Here's my first thought – something similar to revisions in git:
 
 <figure>
-  <img src="../img/commit.png"/>
+  <img src="/assets/images/commit.png"/>
   <figcaption>Left & Middle: uncommitted changes; Right: No new changes to save.</figcaption>
 </figure>
 
