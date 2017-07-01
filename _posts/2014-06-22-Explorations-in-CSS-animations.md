@@ -9,7 +9,7 @@ After begrudgingly installing Facebook's Messenger app on my Nexus 5, I was thor
 
 I wanted to try to replicate this as much as possible with plain old web standards: html, css, and javascript. Here's what I threw together:
 
-<p data-height="500" data-theme-id="0" data-slug-hash="mjedK" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mshwery/pen/mjedK/'>Chatheads style animations</a> by Matt Shwery (<a href='http://codepen.io/mshwery'>@mshwery</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="500" data-theme-id="0" data-slug-hash="mjedK" data-default-tab="result" class='codepen'>See the Pen <a href='https://codepen.io/mshwery/pen/mjedK/'>Chatheads style animations</a> by Matt Shwery (<a href='https://codepen.io/mshwery'>@mshwery</a>) on <a href='https://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
 ### Update:
@@ -20,7 +20,7 @@ I also optimized the drag positioning by handing off the actual drawing of the n
 
 You can see the updated version here: 
 
-<p data-height="500" data-theme-id="0" data-slug-hash="BgImL" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/mshwery/pen/BgImL/'>Chatheads style animations</a> by Matt Shwery (<a href='http://codepen.io/mshwery'>@mshwery</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<p data-height="500" data-theme-id="0" data-slug-hash="BgImL" data-default-tab="result" class='codepen'>See the Pen <a href='https://codepen.io/mshwery/pen/BgImL/'>Chatheads style animations</a> by Matt Shwery (<a href='https://codepen.io/mshwery'>@mshwery</a>) on <a href='https://codepen.io'>CodePen</a>.</p>
 <script async src="//codepen.io/assets/embed/ei.js"></script>
 
-<a href="http://codepen.io/mshwery/pen/BgImL" class="codepen" target="_blank">Check out the code in action on CodePen</a>
+<a href="https://codepen.io/mshwery/pen/BgImL" class="codepen" target="_blank">Check out the code in action on CodePen</a>

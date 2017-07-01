@@ -12,5 +12,3 @@ At last! I launched my simple list app, [minimaList](http://getminimalist.com). 
 ### Updates
 
 Rob from mmminimal.com [interviewed me](http://mmminimal.com/introducing-minimalist-a-hassle-free-list-app/) (Thanks Rob!), as did [Southern Alpha](http://southernalpha.com/general/new-orleans-developer-builds-a-simple-clean-app-to-help-organize-your-life/).
-
-Follow the app on Twitter for updates, feedback, support: [@get_minimalist](http://twitter.com/get_minimalist)

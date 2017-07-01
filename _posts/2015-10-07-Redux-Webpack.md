@@ -14,7 +14,7 @@ Then I watched [Dan Abramov](https://github.com/gaearon)'s talk on Redux, Hot Lo
 <iframe width="100%" height="360" src="https://www.youtube.com/embed/xsSnOQynTHs" frameborder="0" allowfullscreen></iframe>
 
 <br />
-The really awesome thing is that with [Redux](http://rackt.github.io/redux/), you decouple actions from "reducers" which are just pure functions. Reducers take state and an action, and return the new state. They describe how actions modify state.
+The really awesome thing is that with [Redux](http://redux.js.org/), you decouple actions from "reducers" which are just pure functions. Reducers take state and an action, and return the new state. They describe how actions modify state.
 
 Because actions are just plain objects (without middleware) and reducers are pure functions, you can do cool things like keep track of every action and undo/replay them. [Redux Dev Tools](https://github.com/gaearon/redux-devtools) builds on this concept.
 
