@@ -38,9 +38,8 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.3
         with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: out
           enable_jekyll: false
           cname: www.mattshwery.com
-            
-          
