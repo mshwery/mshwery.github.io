@@ -55,10 +55,3 @@
 .link:hover {
   color: #0085bf;
 }
-
-@media (max-width: 600px) {
-  .links {
-    width: 100%;
-    flex-direction: column;
-  }
-}
