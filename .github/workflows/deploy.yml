@@ -1,17 +1,12 @@
-# This is a basic workflow to help you get started with Actions
+name: Deploy
 
-name: Test and Deploy
-
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   test_and_deploy:
     runs-on: ubuntu-latest
@@ -25,6 +20,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node${{ matrix.node-version }}-${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}          
 
       - name: Install dependencies
         run: yarn --frozen-lockfile
