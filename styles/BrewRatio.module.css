@@ -1,0 +1,124 @@
+.page {
+  display: flex;
+  max-width: 860px;
+  margin: auto;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageInner {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 15vh;
+}
+
+.pageIntro {
+  flex: 1;
+  margin-right: 6rem;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1), 0px 5px 15px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.unit {
+  flex: 1 1 auto;
+  padding: 40px;
+}
+
+.unit + .unit {
+  border-top: 1px solid #eee;
+}
+
+.inputContainer {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: baseline;
+}
+
+.numberInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: right;
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: 3.5rem;
+  line-height: 1;
+  padding: 12px 0;
+  background: white;
+  transition: border 150ms linear; 
+}
+
+.numberInput::-webkit-inner-spin-button, 
+.numberInput::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0; 
+}
+
+.label {
+  font-size: 1rem;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.unitSpinner {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: #6764FB;
+  flex-shrink: 0;
+  width: 130px;
+  margin-left: 16px;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  text-align: left;
+}
+
+.unitSpinner:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 600px) {
+  .page {
+    align-items: flex-start;
+  }
+
+  .pageInner {
+    flex-direction: column;
+  }
+  
+  .pageIntro {
+    margin: auto 3rem;
+  }
+
+  .calculator {
+    margin: auto;
+    max-width: 95vw;
+  }
+}
