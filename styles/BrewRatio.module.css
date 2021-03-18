@@ -1,8 +1,16 @@
+.main {
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #fafafa;
+  align-items: flex-start;
+}
+
 .page {
   display: flex;
+  flex: none;
   max-width: 860px;
-  margin: 5vh auto;
-  min-height: 100vh;
+  margin: 15vh auto;
   align-items: center;
   justify-content: center;
   padding: 16px 0;
