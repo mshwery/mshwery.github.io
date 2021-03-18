@@ -135,30 +135,28 @@ function BrewRatio() {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <main className={styles.page}>
-        <div className={styles.pageInner}>
-          <div className={styles.pageIntro}>
-            <h1 className={styles.pageTitle}>
-              Brew Ratio
-            </h1>
-            <p className={styles.description}>
-              Calculate the beans or water you need to make a good cup of coffee.
-            </p>
-          </div>
-          <div className={styles.calculator}>
-            <div className={styles.unit}>
-              <label className={styles.label}>Beans</label>
-              <div className={styles.inputContainer}>
-                <input className={styles.numberInput} type="number" min={1} value={Number(beanAmount.toFixed(2))} onChange={updateBeans} />
-                <button type="button" className={styles.unitSpinner} onClick={cycleBeanUnit}>{unitMap[beanUnit]}</button>
-              </div>
+        <div className={styles.pageIntro}>
+          <h1 className={styles.pageTitle}>
+            Brew Ratio
+          </h1>
+          <p className={styles.description}>
+            Calculate the beans or water you need to make a good cup of coffee.
+          </p>
+        </div>
+        <div className={styles.calculator}>
+          <div className={styles.unit}>
+            <label className={styles.label}>Beans</label>
+            <div className={styles.inputContainer}>
+              <input className={styles.numberInput} type="number" min={1} value={Number(beanAmount.toFixed(2))} onChange={updateBeans} />
+              <button type="button" className={styles.unitSpinner} onClick={cycleBeanUnit}>{unitMap[beanUnit]}</button>
             </div>
+          </div>
 
-            <div className={styles.unit}>
-              <label className={styles.label}>Water</label>
-              <div className={styles.inputContainer}>
-                <input className={styles.numberInput} type="number" min={1} value={Number(waterAmount.toFixed(2))} onChange={updateWater} />
-                <button type="button" className={styles.unitSpinner} onClick={cycleWaterUnit}>{unitMap[waterUnit]}</button>
-              </div>
+          <div className={styles.unit}>
+            <label className={styles.label}>Water</label>
+            <div className={styles.inputContainer}>
+              <input className={styles.numberInput} type="number" min={1} value={Number(waterAmount.toFixed(2))} onChange={updateWater} />
+              <button type="button" className={styles.unitSpinner} onClick={cycleWaterUnit}>{unitMap[waterUnit]}</button>
             </div>
           </div>
         </div>
