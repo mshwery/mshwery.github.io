@@ -55,34 +55,6 @@ function convert(amount: number, from: Unit, to: Unit, type: 'water' | 'beans') 
   return convertUnits(anchor).from(anchorUnit).to(to)
 }
 
-// function toGrams(amount: number, fromUnit: Unit, type: 'water' | 'beans') {
-//   if (massUnits.includes(fromUnit)) {
-//     return convertUnits(amount).from(fromUnit).to('g')
-//   }
-
-//   if (type === 'water') {
-//     // water is roughly 1 gram to 1 ml
-//     return convertUnits(amount).from(fromUnit).to('ml')
-//   }
-
-//   // coffee is roughly 4-7 grams per Tbs, so let's assume 5 for simplicity
-//   return convertUnits(amount).from(fromUnit).to('Tbs') * 5
-// }
-
-// function fromGrams(amount: number, toUnit: Unit, type: 'water' | 'beans') {
-//   if (massUnits.includes(toUnit)) {
-//     return convertUnits(amount).from('g').to(toUnit)
-//   }
-
-//   if (type === 'water') {
-//     // water is roughly 1 gram to 1 ml
-//     return convertUnits(amount).from('ml').to(toUnit)
-//   }
-
-//   // coffee is roughly 4-7 grams per Tbs, so let's assume 5 for simplicity
-//   return convertUnits(amount / 5).from('Tbs').to(toUnit)
-// }
-
 function BrewRatio() {
   const [beanUnit, setBeanUnit] = React.useState<BeanUnit>('g')
   const [waterUnit, setWaterUnit] = React.useState<WaterUnit>('g')
