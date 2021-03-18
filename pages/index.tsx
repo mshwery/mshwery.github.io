@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
+import Link from '../components/Link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -15,13 +15,11 @@ export default function Home() {
         </h1>
 
         <div className={styles.links}>
-          <a className={styles.link} href="https://github.com/mshwery">GitHub</a>
-          <a className={styles.link} href="https://twitter.com/mshwery">Twitter</a>
-          <a className={styles.link} href="https://www.linkedin.com/in/mshwery/">LinkedIn</a>
-          <Link href="/brew-ratio">
-            <a className={styles.link}>Brew Ratio</a>
-          </Link>
-          <a className={styles.link} href="https://beta.getminimalist.com">Minimalist</a>
+          <Link className={styles.link} href="https://github.com/mshwery">GitHub</Link>
+          <Link className={styles.link} href="https://twitter.com/mshwery">Twitter</Link>
+          <Link className={styles.link} href="https://www.linkedin.com/in/mshwery/">LinkedIn</Link>
+          <Link className={styles.link} href="/brew-ratio">Brew Ratio</Link>
+          <Link className={styles.link} href="https://beta.getminimalist.com">Minimalist</Link>
         </div>
       </main>
     </div>
