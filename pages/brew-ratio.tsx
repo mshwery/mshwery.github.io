@@ -18,6 +18,13 @@ function BrewRatio() {
         <link rel="mask-icon" href="/brew-ratio/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#00aba9" />
         <meta name="theme-color" content="#ffffff" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@mshwery" />
+        <meta name="twitter:creator" content="@mshwery" />
+        <meta property="og:url" content="https://www.mattshwery.com/brew-ratio/" />
+        <meta property="og:title" content="Brew Ratio" />
+        <meta property="og:description" content="A simple coffee calculator to help you make the best cup of coffee with the tools you have." />
+        <meta property="og:image" content="https://www.mattshwery.com/brew-ratio/brew-ratio-preview.png" />
       </Head>
       <main className={styles.main}>
         <div className={styles.page}>
