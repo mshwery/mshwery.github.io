@@ -1,4 +1,5 @@
 import * as React from 'react'
+import classnames from 'clsx'
 import convertUnits from 'convert-units'
 import Card from './Card'
 import styles from '../styles/BrewRatio.module.css'
@@ -56,28 +57,32 @@ function convert(amount: number, from: Unit, to: Unit, type: 'water' | 'beans') 
 }
 
 const BrewRatioCalculator: React.FC = () => {
+  const ratios = ['1:15', '1:16', '1:17', '1:18']
   const [beanUnit, setBeanUnit] = React.useState<BeanUnit>('g')
   const [waterUnit, setWaterUnit] = React.useState<WaterUnit>('g')
   const [beanAmount, setBeanAmount] = React.useState<number>(30)
   const [waterAmount, setWaterAmount] = React.useState<number>(500)
+  const [selectedRatio, setRatio] = React.useState(ratios[1])
 
   const updateWater = React.useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const [_, ratio] = selectedRatio.split(':')
     const amount = Number(event.target.value)
     const gramsOfWater = convert(amount, waterUnit, 'g', 'water')
-    const gramsOfBeans = Math.round(gramsOfWater / 17)
+    const gramsOfBeans = Math.round(gramsOfWater / Number(ratio))
     const beans = convert(gramsOfBeans, 'g', beanUnit, 'beans')
     setWaterAmount(amount)
     setBeanAmount(beans)
-  }, [beanUnit, waterUnit])
+  }, [selectedRatio, beanUnit, waterUnit])
 
   const updateBeans = React.useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const [_, ratio] = selectedRatio.split(':')
     const amount = Number(event.target.value)
     const gramsOfBeans = convert(amount, beanUnit, 'g', 'beans')
-    const gramsOfWater = Math.round(gramsOfBeans * 17)
+    const gramsOfWater = Math.round(gramsOfBeans * Number(ratio))
     const water = convert(gramsOfWater, 'g', waterUnit, 'water')
     setBeanAmount(amount)
     setWaterAmount(water)
-  }, [beanUnit, waterUnit])
+  }, [selectedRatio, beanUnit, waterUnit])
 
   const cycleBeanUnit = React.useCallback(() => {
     const unit = getNextUnit(beanUnits, beanUnit)
@@ -93,20 +98,40 @@ const BrewRatioCalculator: React.FC = () => {
     setWaterAmount(amount)
   }, [waterAmount, waterUnit])
 
+  const updateRatio = React.useCallback((newRatio: string) => {
+    setRatio(newRatio)
+    const [_, ratio] = newRatio.split(':')
+    const gramsOfBeans = convert(beanAmount, beanUnit, 'g', 'beans')
+    const gramsOfWater = Math.round(gramsOfBeans * Number(ratio))
+    const water = convert(gramsOfWater, 'g', waterUnit, 'water')
+    setWaterAmount(water)
+  }, [beanAmount, beanUnit, waterUnit])
+
   return (
     <Card className={styles.calculator}>
-      <div className={styles.unit}>
+      <div className={classnames(styles.section, styles.ratio)}>
+        <label className={classnames(styles.label, styles.inline)}>Ratio</label>
+        <div className={classnames(styles.inputContainer, styles.inline, styles.pills)}>
+          {ratios.map(ratio => (
+            <button type="button" key={ratio} className={classnames(styles.pill, { [styles.selected]: ratio === selectedRatio})} onClick={() => updateRatio(ratio)}>
+              {ratio}
+            </button>
+          ))}
+        </div>
+      </div>
+      
+      <div className={styles.section}>
         <label className={styles.label}>Beans</label>
         <div className={styles.inputContainer}>
-          <input className={styles.numberInput} type="number" min={1} value={Number(beanAmount.toFixed(2))} onChange={updateBeans} />
+          <input className={styles.numberInput} type="number" min={1} value={beanAmount ? Number(beanAmount.toFixed(2)) : undefined} onChange={updateBeans} />
           <button type="button" className={styles.unitSpinner} onClick={cycleBeanUnit}>{unitMap[beanUnit]}</button>
         </div>
       </div>
 
-      <div className={styles.unit}>
+      <div className={styles.section}>
         <label className={styles.label}>Water</label>
         <div className={styles.inputContainer}>
-          <input className={styles.numberInput} type="number" min={1} value={Number(waterAmount.toFixed(2))} onChange={updateWater} />
+          <input className={styles.numberInput} type="number" min={1} value={waterAmount ? Number(waterAmount.toFixed(2)) : undefined} onChange={updateWater} />
           <button type="button" className={styles.unitSpinner} onClick={cycleWaterUnit}>{unitMap[waterUnit]}</button>
         </div>
       </div>

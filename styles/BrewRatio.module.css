@@ -9,7 +9,7 @@
 .page {
   display: flex;
   flex: 1;
-  max-width: 860px;
+  max-width: 960px;
   margin: 15vh auto;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,7 @@
 .pageIntro {
   flex: 1;
   padding: 2rem;
-  margin-bottom: 4rem;
+  margin: 0 auto 2rem;
   max-width: 400px;
 }
 
@@ -54,12 +54,12 @@
   margin: 0 1rem;
 }
 
-.unit {
+.section {
   flex: 1 1 auto;
-  padding: 2rem 2rem 1rem;
+  padding: 2rem;
 }
 
-.unit + .unit {
+.section + .section {
   border-top: 1px solid #eee;
 }
 
@@ -78,7 +78,7 @@
   outline: none;
   font-size: 3.5rem;
   line-height: 1;
-  padding: 12px 0;
+  padding: 0;
   background: white;
   transition: border 150ms linear; 
 }
@@ -92,17 +92,63 @@
 .label {
   font-size: 1rem;
   display: flex;
-  margin-bottom: 10px;
+}
+
+.inline {
+  display: inline-flex;
+}
+
+.ratio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.pills {
+  flex: none;
+  margin-left: auto;
+}
+
+.pill {
+  appearance: none;
+  outline: none;
+  border: none;
+  margin-right: .5rem;
+  cursor: pointer;
+  border-radius: 999px;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .5rem;
+  background-color: white;
+  color: var(--text-color);
+  /* background-color: var(--background-color); */
+}
+
+.pill.selected {
+  color: var(--accent-color);
+  background-color: var(--background-color);
+}
+
+.pill:hover {
+  color: white;
+  background-color: var(--accent-color);
+}
+
+.pill:last-of-type {
+  margin-right: 0;
 }
 
 .unitSpinner {
   font-size: 3.5rem;
   font-weight: 500;
-  color: #635bff;
-  flex-shrink: 0;
-  min-width: 130px;
-  width: 130px;
-  margin-left: 16px;
+  color: var(--accent-color);
+  flex: none;
+  margin-left: 1rem;
+  padding: 0;
   cursor: pointer;
   appearance: none;
   border: none;
