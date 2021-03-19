@@ -123,7 +123,7 @@ const BrewRatioCalculator: React.FC = () => {
       <div className={styles.section}>
         <label className={styles.label}>Beans</label>
         <div className={styles.inputContainer}>
-          <input className={styles.numberInput} type="number" min={1} value={beanAmount ? Number(beanAmount.toFixed(2)) : undefined} onChange={updateBeans} />
+          <input className={styles.numberInput} type="number" pattern="[0-9]*" min={1} value={beanAmount ? Number(beanAmount.toFixed(2)) : undefined} onChange={updateBeans} />
           <button type="button" className={styles.unitSpinner} onClick={cycleBeanUnit}>{unitMap[beanUnit]}</button>
         </div>
       </div>
@@ -131,7 +131,7 @@ const BrewRatioCalculator: React.FC = () => {
       <div className={styles.section}>
         <label className={styles.label}>Water</label>
         <div className={styles.inputContainer}>
-          <input className={styles.numberInput} type="number" min={1} value={waterAmount ? Number(waterAmount.toFixed(2)) : undefined} onChange={updateWater} />
+          <input className={styles.numberInput} type="number" pattern="[0-9]*" min={1} value={waterAmount ? Number(waterAmount.toFixed(2)) : undefined} onChange={updateWater} />
           <button type="button" className={styles.unitSpinner} onClick={cycleWaterUnit}>{unitMap[waterUnit]}</button>
         </div>
       </div>
