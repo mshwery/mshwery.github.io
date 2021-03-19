@@ -62,7 +62,7 @@ const BrewRatioCalculator: React.FC = () => {
   const [waterUnit, setWaterUnit] = React.useState<WaterUnit>('g')
   const [beanAmount, setBeanAmount] = React.useState<number>(30)
   const [waterAmount, setWaterAmount] = React.useState<number>(500)
-  const [selectedRatio, setRatio] = React.useState(ratios[1])
+  const [selectedRatio, setRatio] = React.useState(ratios[2])
 
   const updateWater = React.useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
     const [_, ratio] = selectedRatio.split(':')
