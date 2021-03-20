@@ -106,6 +106,13 @@
   padding: 1rem 2rem;
 }
 
+.subText {
+  text-align: right;
+  font-style: italic;
+  margin-bottom: 0;
+  font-size: .9rem;
+}
+
 .pills {
   flex: none;
   margin-left: auto;

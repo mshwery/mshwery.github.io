@@ -39,7 +39,7 @@ function BrewRatio() {
             <p className={styles.description}>
               Calculate the beans or water you need to make a good cup of coffee.
             </p>
-            <p className={styles.author}>
+            <p>
               A tiny utility made by{' '}
               <Link className={styles.link} href="/">Matt Shwery</Link>
             </p>

@@ -134,6 +134,11 @@ const BrewRatioCalculator: React.FC = () => {
           <input className={styles.numberInput} type="number" pattern="[0-9]*" min={1} value={waterAmount ? Number(waterAmount.toFixed(2)) : undefined} onChange={updateWater} />
           <button type="button" className={styles.unitSpinner} onClick={cycleWaterUnit}>{unitMap[waterUnit]}</button>
         </div>
+        {waterUnit === 'cup' && (
+          <p className={styles.subText}>
+            <small>* standard 8 fl oz cups, unlike some coffee machines</small>
+          </p>
+        )}
       </div>
     </Card>
   )
