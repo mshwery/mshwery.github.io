@@ -2,6 +2,7 @@ import * as React from 'react'
 import Head from 'next/head'
 import { Coffee } from 'react-feather'
 import BrewRatioCalculator from '../../components/BrewRatioCalculator'
+import MobileStoreButton from '../../components/MobileStoreButton'
 import Link from '../../components/Link'
 import styles from '../../styles/BrewRatio.module.css'
 
@@ -43,6 +44,12 @@ function BrewRatio() {
               A tiny utility made by{' '}
               <Link className={styles.link} href="/">Matt Shwery</Link>
             </p>
+            <div>
+              <MobileStoreButton
+                store="android"
+                url="https://play.google.com/store/apps/details?id=com.mshwery.brewratio"
+              />
+            </div>
           </div>
           <BrewRatioCalculator />
         </div>

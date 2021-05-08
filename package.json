@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "@next/mdx": "^10.2.0",
     "clsx": "^1.1.1",
     "convert-units": "^2.3.4",
