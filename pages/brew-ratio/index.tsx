@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Head from 'next/head'
 import { Coffee } from 'react-feather'
-import BrewRatioCalculator from '../components/BrewRatioCalculator'
-import Link from '../components/Link'
-import styles from '../styles/BrewRatio.module.css'
+import BrewRatioCalculator from '../../components/BrewRatioCalculator'
+import Link from '../../components/Link'
+import styles from '../../styles/BrewRatio.module.css'
 
 function BrewRatio() {
   return (
