@@ -20,6 +20,7 @@ export default function Home() {
           <Link className={styles.link} href="https://www.linkedin.com/in/mshwery/">LinkedIn</Link>
           <Link className={styles.link} href="/brew-ratio">Brew Ratio</Link>
           <Link className={styles.link} href="https://www.getminimalist.com/">Minimalist</Link>
+          <Link className={styles.link} href="https://getkoala.com/">Koala</Link>
         </div>
       </main>
     </div>
