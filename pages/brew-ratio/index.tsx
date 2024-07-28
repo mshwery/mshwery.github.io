@@ -44,12 +44,6 @@ function BrewRatio() {
               A tiny utility made by{' '}
               <Link className={styles.link} href="/">Matt Shwery</Link>
             </p>
-            <div>
-              <MobileStoreButton
-                store="android"
-                url="https://play.google.com/store/apps/details?id=com.mshwery.brewratio"
-              />
-            </div>
           </div>
           <BrewRatioCalculator />
         </div>
